@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import  axios from 'axios'
-function ProductPage() {
+export default function ProductPage() {
 
   const [product, setProduct] = useState({})
   const params = useParams()
@@ -18,10 +18,9 @@ function ProductPage() {
   return (
     <div>
        <h2> {product.title} </h2>
-       <h2> {product.price} </h2>
+       <h2> {product.price}$ </h2>
        <h2> {product.description} </h2>
+       <Link to={"/"} class="link" href="#">Go back</Link>
     </div>
   )
 }
-
-export default ProductPage
